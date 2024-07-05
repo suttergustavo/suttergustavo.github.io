@@ -10,7 +10,6 @@ $(document).ready(function() {
         $(document).find(".profile").children('img').attr('src', '/assets/img/prof_pic_flu.jpg');
     });
     $(".sports").mouseout(function (){
-        console.log("out");
         $(document).find(".profile").children('img').attr('src', '/assets/img/prof_pic.jpg');
     });
 });
