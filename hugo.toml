@@ -1,0 +1,76 @@
+baseURL = 'https://suttergustavo.github.io'
+languageCode = 'en-us'
+title = 'Gustavo Sutter'
+theme = 'typo'
+
+# Google analytics code
+googleAnalytics = "G-xxxxxxxxx"
+
+[taxonomies]
+tag = 'tags'
+
+[params]
+# Meta description
+description = "My personal website"
+profilePicture = "images/profile.jpg"
+faviconEmoji = "🧑‍💻"
+
+# Appearance settings
+theme = 'light'
+colorPalette = 'default'
+hideHeader = false
+
+# Intro on main page, content is markdown
+homeIntroTitle = 'Hi!'
+homeIntroContent = """
+I’m Gustavo Sutter, a CS PhD student at the University of Waterloo, advised by Prof. Pascal Poupart. My research interests revolve around probabilistic machine learning, with a focus on decision-making and NLP.
+"""
+
+# Collection to display on home
+# homeCollectionTitle = 'Posts'
+# homeCollection = 'posts'
+
+# Lists parameters
+paginationSize = 100
+listSummaries = true
+listDateFormat = '2 Jan 2006'
+
+# Breadcrumbs
+breadcrumbs = false
+
+# Social icons
+[[params.social]]
+name = "github"
+url = "https://www.github.com/suttergustavo"
+
+[[params.social]]
+name = "bluesky"
+url = "https://bsky.app/profile/suttergustavo.bsky.social"
+
+# Main menu pages
+[[params.menu]]
+name = "about"
+url = "/"
+
+# [[params.menu]]
+# name = "publications"
+# url = "/publications"
+#
+# [[params.menu]]
+# name = "blog"
+# url = "/posts"
+
+# Syntax highlight on code blocks
+[markup]
+[markup.highlight]
+style = 'algol'
+
+# Giscus comments
+[params.giscus]
+enable = false
+repo = "user/repo"
+repoid = "repoId"
+category = "General"
+categoryid = "categoryId"
+mapping = "pathname"
+theme = "preferred_color_scheme"

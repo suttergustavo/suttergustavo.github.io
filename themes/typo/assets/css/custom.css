@@ -1,0 +1,44 @@
+/* Place custom css here */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.intro figure {
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.intro figure img {
+    width: 100%;
+    height: auto;
+}
+
+.intro .intro-text {
+    flex: 1;
+}
+
+.intro .intro-text h1 {
+  margin-top: 0;
+}
+
+.intro .intro-text p {
+  text-align: justify;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .intro {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .intro figure {
+    flex: 0 0 auto; /* Remove fixed size */
+    max-width: 100%; /* Let the image fill the width */
+  }
+
+  .intro .intro-text {
+    height: auto; /* Adjust height to content */
+  }
+}
