@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-us">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tags | Gustavo Sutter</title>
-  <meta name="description" content="Academic website and blog">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%f0%9f%91%a8%e2%80%8d%f0%9f%92%bb</text></svg>">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ .Site.Params.description }}">
+  {{ if .Site.Params.favicon }}<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>{{ .Site.Params.favicon }}</text></svg>">{{ end }}
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/syntax.css">
   <script>
@@ -21,29 +21,21 @@
 <body>
   <nav class="nav">
     <div class="nav-container">
-      <a href="/" class="nav-title">Gustavo Sutter</a>
+      <a href="/" class="nav-title">{{ .Site.Title }}</a>
       <ul class="nav-links">
         <li><a href="/">Home</a></li>
-        
+        {{ if not .Site.Params.disablePublications }}<li><a href="/publications/">Publications</a></li>{{ end }}
         <li><a href="/blog/">Blog</a></li>
       </ul>
     </div>
   </nav>
 
   <main class="main">
-    
-<h1>Tags</h1>
-
-
-<div class="page-content">
-  
-</div>
-
-
+    {{ block "main" . }}{{ end }}
   </main>
 
   <footer class="footer">
-    <p>&copy; 2025 Gustavo Sutter. All rights reserved.</p>
+    <p>&copy; {{ now.Year }} {{ .Site.Params.author }}. All rights reserved.</p>
   </footer>
 </body>
 </html>

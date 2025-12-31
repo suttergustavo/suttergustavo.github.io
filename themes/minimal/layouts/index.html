@@ -1,0 +1,45 @@
+{{ define "main" }}
+<div class="profile">
+  {{ if .Site.Params.photo }}
+  <img src="{{ .Site.Params.photo }}" alt="{{ .Site.Params.author }}" class="profile-photo">
+  {{ end }}
+  <div class="profile-info">
+    <h1>{{ .Site.Params.author }}</h1>
+    <p class="role-affiliation">{{ .Site.Params.role }} @ {{ .Site.Params.affiliation }}</p>
+    {{ if .Site.Params.email }}<p class="email">{{ .Site.Params.email }}</p>{{ end }}
+    <div class="social-links">
+      {{ if .Site.Params.scholar }}<a href="{{ .Site.Params.scholar }}" target="_blank" rel="noopener">Scholar</a>{{ end }}
+      {{ if .Site.Params.github }}<a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>{{ end }}
+      {{ if .Site.Params.bluesky }}<a href="{{ .Site.Params.bluesky }}" target="_blank" rel="noopener">Bluesky</a>{{ end }}
+    </div>
+  </div>
+</div>
+
+<div class="bio">
+  {{ .Content }}
+</div>
+
+{{ if .Site.Data.news }}
+<h2>News</h2>
+<ul class="news-list">
+  {{ range first 5 .Site.Data.news }}
+  <li class="news-item">
+    <span class="news-date">{{ .date }}</span>
+    <span class="news-text">{{ .text | markdownify }}</span>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+<h2>Recent Posts</h2>
+<ul class="post-list">
+  {{ range first 3 (where .Site.RegularPages "Section" "blog") }}
+  <li class="post-item">
+    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p class="summary">{{ .Summary }}</p>
+  </li>
+  {{ end }}
+</ul>
+<p><a href="/blog/">View all posts &rarr;</a></p>
+{{ end }}

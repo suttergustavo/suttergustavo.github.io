@@ -1,0 +1,12 @@
+[
+  {
+    "type": "inproceedings",
+    "key": "luvizon2021adaptive",
+    "title": "Adaptive Multiplane Image Generation From a Single Internet Picture",
+    "author": "Luvizon, Diogo C., Carvalho, Gustavo Sutter P., dos Santos, Andreza A., Conceicao, Jhonatas S., Flores-Campana, Jose L., Decker, Luis G. L., Souza, Marcos R., Pedrini, Helio, Joia, Antonio, Penatti, Otavio A. B.",
+    "booktitle": "WACV",
+    "year": "2021",
+    "url": "https://openaccess.thecvf.com/content/WACV2021/papers/Luvizon_Adaptive_Multiplane_Image_Generation_From_a_Single_Internet_Picture_WACV_2021_paper.pdf",
+    "venue": "WACV"
+  }
+]

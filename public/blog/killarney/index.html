@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My (Opinionated) Workflow on Killarney | Gustavo Sutter</title>
+  <meta name="description" content="Academic website and blog">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%f0%9f%91%a8%e2%80%8d%f0%9f%92%bb</text></svg>">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$', '$$'], ['\\[', '\\]']]
+      }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-title">Gustavo Sutter</a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        
+        <li><a href="/blog/">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    
+
+<article>
+  <header class="post-header">
+    <h1>My (Opinionated) Workflow on Killarney</h1>
+    <p class="date">January 2, 2025</p>
+  </header>
+  
+  <details class="toc">
+    <summary>Table of Contents</summary>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#about-killarney">About Killarney</a></li>
+    <li><a href="#job-scheduler-slurm">Job Scheduler (Slurm)</a>
+      <ul>
+        <li><a href="#interactive-session">Interactive Session</a></li>
+        <li><a href="#batch-session">Batch Session</a></li>
+        <li><a href="#managing-jobs">Managing Jobs</a></li>
+      </ul>
+    </li>
+    <li><a href="#virtual-environment">Virtual Environment</a></li>
+    <li><a href="#text-editor">Text Editor</a></li>
+    <li><a href="#jupyter-notebook">Jupyter Notebook</a></li>
+  </ul>
+</nav>
+  </details>
+  
+  <div class="post-content">
+    <div class="alert alert-note">
+  <span class="alert-title">Note</span>
+  <div class="alert-content"><p>As the title indicates this workflow is full of arbitrary choices. For this reason, it&rsquo;s not only possible&mdash;but likely&mdash;that are better alternatives for some of the things that I&rsquo;m suggesting here. Feel free to reach out if you think something should be done differently :)</p></div>
+</div><h2 id="about-killarney">About Killarney</h2>
+<h2 id="job-scheduler-slurm">Job Scheduler (Slurm)</h2>
+<p>The Killarney cluster, like multiple other clusters, uses Slurm to manage the workload across hundreds of users. In summary, Slurm manages the queue of jobs to be run so all users have access to resources. This means that instead of running your code directly on the node you ssh into (so-called <em>login nodes</em>) you have to first get a <em>compute node</em> allocated to you by Slurm.</p>
+<p>There are two types of sessions: interactive sessions and batch sessions. The former is used to run scripts</p>
+<h3 id="interactive-session">Interactive Session</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">srun -c
+</span></span></code></pre></div><h3 id="batch-session">Batch Session</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">srun -c
+</span></span></code></pre></div><h3 id="managing-jobs">Managing Jobs</h3>
+<p>Important References:</p>
+<ul>
+<li><a href="https://docs.alliancecan.ca/wiki/Running_jobs">https://docs.alliancecan.ca/wiki/Running_jobs</a></li>
+<li><a href="https://slurm.schedmd.com/documentation.html">https://slurm.schedmd.com/documentation.html</a></li>
+</ul>
+<h2 id="virtual-environment">Virtual Environment</h2>
+<h2 id="text-editor">Text Editor</h2>
+<h2 id="jupyter-notebook">Jupyter Notebook</h2>
+
+  </div>
+</article>
+
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Gustavo Sutter. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+
+<div class="publications-list">
+  {{ range $.Site.Data.publications }}
+  <div class="publication">
+    <p class="pub-title">{{ .title }}</p>
+    <p class="pub-authors">{{ .author }}</p>
+    <p class="pub-venue">{{ .venue }}, {{ .year }}</p>
+    <p class="pub-links">
+      {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+      {{ if .arxiv }}<a href="https://arxiv.org/abs/{{ .arxiv }}" target="_blank" rel="noopener">arXiv</a>{{ end }}
+      {{ if .code }}<a href="{{ .code }}" target="_blank" rel="noopener">Code</a>{{ end }}
+      {{ if .doi }}<a href="https://doi.org/{{ .doi }}" target="_blank" rel="noopener">DOI</a>{{ end }}
+    </p>
+  </div>
+  {{ end }}
+</div>
+{{ end }}
